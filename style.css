@@ -1,148 +1,139 @@
 :root {
-    --dracula-background: #282a36;
-    --dracula-current-line: #44475a;
-    --dracula-foreground: #282a37;
-    --dracula-comment: #6272a4;
-    --dracula-cyan: #8be9fd;
-    --dracula-green: #50fa7b;
-    --dracula-orange: #ffb86c;
-    --dracula-pink: #ff79c6;
-    --dracula-purple: #bd93f9;
-    --dracula-red: #ff5555;
-    --dracula-yellow: #f1fa8c;
+    --background: #121212;
+    --surface: #1E1E1E;
+    --primary: #BB86FC;
+    --secondary: #03DAC6;
+    --error: #CF6679;
+    --text: #E0E0E0;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fira Code', 'Consolas', monospace;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
+    background-color: var(--background);
+    color: var(--text);
     line-height: 1.6;
-    color: var(--dracula-foreground);
-    background-color: var(--dracula-background);
-    padding: 20px;
 }
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--dracula-current-line);
-    padding: 30px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--surface);
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .header {
     text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--dracula-purple);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--primary);
 }
 
 .header h1 {
-    color: var(--dracula-pink);
-    font-size: 2.5em;
-    margin-bottom: 5px;
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .header h2 {
-    color: var(--dracula-cyan);
-    font-size: 1.4em;
+    color: var(--secondary);
+    font-size: 1.4rem;
+    opacity: 0.9;
 }
 
 .contact ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 20px 0;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--dracula-comment);
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
 }
 
 .contact li {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: var(--dracula-foreground);
+    gap: 0.8rem;
+    color: var(--text);
+    opacity: 0.9;
 }
 
 h3 {
-    color: var(--dracula-green);
-    margin: 25px 0 15px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid var(--dracula-comment);
+    color: var(--secondary);
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #333;
 }
 
 .entry {
-    margin-bottom: 20px;
-    background-color: var(--dracula-background);
-    padding: 15px;
+    background-color: #262626;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 6px;
-    border-left: 3px solid var(--dracula-purple);
+    border-left: 4px solid var(--primary);
 }
 
 .entry h4 {
-    color: var(--dracula-cyan);
-    margin-bottom: 5px;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
 }
 
 .company, .institution {
-    color: var(--dracula-comment);
+    color: #888;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 0.8rem;
 }
 
 .skills ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
 }
 
 .skills li {
-    background-color: var(--dracula-background);
-    padding: 8px;
-    border-radius: 5px;
+    background-color: #2A2A2A;
+    padding: 0.6rem;
+    border-radius: 4px;
     text-align: center;
-    border: 1px solid var(--dracula-purple);
-    transition: all 0.3s ease;
+    transition: transform 0.2s;
 }
 
 .skills li:hover {
-    background-color: var(--dracula-purple);
     transform: translateY(-2px);
+    background-color: #333;
 }
 
 .experience li::before {
-    content: "▹";
-    color: var(--dracula-green);
-    position: absolute;
-    left: 0;
+    content: "▸";
+    color: var(--secondary);
+    margin-right: 0.5rem;
 }
 
 a {
-    color: var(--dracula-cyan);
+    color: var(--secondary);
     text-decoration: none;
-    border-bottom: 1px dotted var(--dracula-cyan);
+    border-bottom: 1px dotted var(--secondary);
 }
 
 a:hover {
-    color: var(--dracula-pink);
+    color: var(--primary);
     border-bottom-style: solid;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .container {
-        padding: 15px;
+        margin: 1rem;
+        padding: 1.5rem;
     }
     
     .contact ul {
         flex-direction: column;
-    }
-    
-    .skills ul {
-        grid-template-columns: 1fr;
     }
 }
