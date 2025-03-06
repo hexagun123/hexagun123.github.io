@@ -76,6 +76,7 @@ h3 {
 
 .entry {
     margin-bottom: 15px;
+    list-style: none;
 }
 
 .entry h4 {
