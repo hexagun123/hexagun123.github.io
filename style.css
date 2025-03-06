@@ -76,6 +76,10 @@ h3 {
 
 .entry {
     margin-bottom: 15px;
+    
+}
+
+.entry ul{
     list-style: none;
 }
 
