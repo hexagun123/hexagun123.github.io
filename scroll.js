@@ -37,3 +37,24 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+// Add this to the bottom of scroll.js
+document.addEventListener('DOMContentLoaded', function() {
+    const animatedSections = document.querySelectorAll('.section-animate');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-visible');
+            } else {
+                entry.target.classList.remove('section-visible');
+            }
+        });
+    }, {
+        threshold: 0.55, // Trigger when 55% of section is visible
+    });
+
+    animatedSections.forEach(section => {
+        observer.observe(section);
+    });
+});
