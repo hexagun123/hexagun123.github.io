@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.55, // Trigger when 55% of section is visible
+        threshold: 0.40, // Trigger when 35% of section is visible
     });
 
     animatedSections.forEach(section => {
