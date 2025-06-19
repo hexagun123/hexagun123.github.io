@@ -46,9 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('section-visible');
-            } else {
-                entry.target.classList.remove('section-visible');
-            }
+            } else { }
         });
     }, {
         threshold: 0.20, // Trigger when 20% of section is visible

@@ -9,10 +9,16 @@
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 32px;
-    --spacing-lg: 64px;
+    --spacing-lg: 32px;
     --spacing-xl: 128px;
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.icons{
+    filter: invert(100%);
+    height:32px; 
+    width:32px;
 }
 
 * {
@@ -243,7 +249,7 @@ section h2 {
     }
 }
 
-.education-block, .skills-block {
+.education-block{
     background-color: var(--surface);
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius);
