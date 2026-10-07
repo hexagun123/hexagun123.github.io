@@ -10,7 +10,7 @@
     --spacing-sm: 16px;
     --spacing-md: 32px;
     --spacing-lg: 32px;
-    --spacing-xl: 128px;
+    --spacing-xl: 32px;
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
